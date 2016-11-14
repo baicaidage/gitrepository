@@ -1,3 +1,3 @@
 git is destribute control system
 git is free software gpl
-this is
+this is a word
