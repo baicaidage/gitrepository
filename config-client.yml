@@ -1,5 +1,5 @@
 info:
   profile: default
   from: git1
-  
+password: {cipher}f2f8483c66916b0deb9f27bdc584418455fc07c5e6741f7f3db5cb811dbf08e0  
 test: bbb
