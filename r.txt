@@ -1,1 +1,0 @@
-ommonUtil.serialize(SysConstants.goods_snapup_prefix+jsonO.getDouble("page"))
