@@ -2,7 +2,7 @@ spring:
   cloud:
     loadbalancer:
       retry:
-        enabled: false #重试机制开关，默认false
+        enabled: true #重试机制开关，默认false
   http:
     encoding:
       enabled: true
