@@ -1,0 +1,107 @@
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true #重试机制开关，默认false
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  #redis集群配置
+#  redis:
+#    database: 0
+#    password: qwer1234
+#    timeout: 1000ms
+#    lettuce:
+#      pool:
+#        max-active:  100 # 连接池最大连接数（使用负值表示没有限制）
+#        max-idle: 100 # 连接池中的最大空闲连接
+#        min-idle: 50 # 连接池中的最小空闲连接
+#        max-wait: 6000ms # 连接池最大阻塞等待时间（使用负值表示没有限制）
+#    cluster:
+#      max-redirects: 3
+#      nodes:
+#      - 192.168.131.130:7001
+#      - 192.168.131.130:7002
+#      - 192.168.131.130:7003
+#      - 192.168.131.130:7004
+#      - 192.168.131.130:7005
+#      - 192.168.131.130:7006
+
+  #redis非集群配置
+  redis:
+    database: 0 #使用redis的的那个库
+    host: localhost #连接地址
+    port: 6379  #端口口
+    password: qwer1234  #连接密钥
+    timeout: 100ms #连接超时时间
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms #连接池最大阻塞等待时间（赋值表是没有限制）
+        max-idle: 8 #连接池中的最大空闲连接
+        min-idle: 0 #连接池中的最小空闲连接
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka
+
+
+hystrix:
+  metrics: true #开启熔断功能（默认开启）
+  command:
+    default:
+      execution:
+        #为true,则会有两个执行方法超时的配置,一个就是ribbon的ReadTimeout,一个就是熔断器hystrix的timeoutInMilliseconds, 此时谁的值小谁生效
+        #为false,则熔断器不进行超时熔断,而是根据ribbon的ReadTimeout抛出的异常而熔断,也就是取决于ribbon
+        timeout:
+          enable: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 #配置断路器超时时间，默认是1000（1秒），该时间要大于ribbon的请求时间（ReadTimeout）
+    "ISaasServiceInner#sendEmail(String)":
+      execution:
+        timeout:
+          enable: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000 # sendEmail服务断路器配置
+
+feign:
+  hystrix:
+    enabled: true #开启feign熔断(默认打开)
+  compression:  #压缩配置
+    request:
+      min-request-size: 2048
+      mime-types:
+        - text/html, application/xml, application/json
+      enabled: true
+    response:
+      enabled: true
+
+ribbon: #设置默认客户端调用超时时间
+    ConnectionTimeout: 500
+    ReadTimeout: 4000
+    MaxAutoRetries: 0
+    MaxAutoRetriesNextServer: 2
+    OkToRetryOnAllOperations: false
+
+#saas-service-inner服务的重试机制设置
+saas-service-inner:
+  ribbon:
+    MaxAutoRetries: 1 #同一台实例最大重试次数，不包括首次调用
+    MaxAutoRetriesNextServer: 2 #重试负载均衡其他的实例最大重试次数，不包括首次调用
+    ConnectTimeout: 500 #连接超时时间
+    ReadTimeout: 2000 #请求处理超时时间
+    OkToRetryOnAllOperations: true #是否对所有操作请求都进行重试
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
