@@ -1,0 +1,20 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka
+zuul:
+  host:
+    max-total-connections: 200  #总连接数（默认200）
+    max-per-route-connections: 20 #每个路由练级数（默认20）
+  sensitive-headers: Cookie, Set-Cookie, Authorization
+  #避免使用默认路由规则将服务暴露，全部使用手动路由规则如下routes
+  ignored-services: '*'
+  routes:
+      api-open:
+        path: /saas-service-open/**
+        service-id: saas-service-open
+      api-resource:
+        path: /saas-resource-manager/**
+        service-id: saas-resource-manager

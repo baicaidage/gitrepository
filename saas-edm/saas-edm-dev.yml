@@ -1,0 +1,18 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.163.com
+    port: 25
+    username: qjls19861217@163.com
+    password: qjls952709
+    properties:
+      mail:
+        stmp:
+          auth: true
+          timeout: 30000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka
+  instance:
+    hostname: localhost
