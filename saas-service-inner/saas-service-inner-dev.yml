@@ -1,7 +1,7 @@
 spring:
   http:
     encoding:
-      enabled: false
+      enabled: true
       charset: UTF-8
 eureka:      
   instance:
