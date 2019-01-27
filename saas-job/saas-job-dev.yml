@@ -1,0 +1,10 @@
+server:
+  port: 2007
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

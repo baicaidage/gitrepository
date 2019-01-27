@@ -1,3 +1,8 @@
+server:
+  port: 2002
+  servlet:
+    context-path: /
+    
 spring:
   cloud:
     loadbalancer:
@@ -41,7 +46,12 @@ spring:
         max-wait: -1ms #连接池最大阻塞等待时间（赋值表是没有限制）
         max-idle: 8 #连接池中的最大空闲连接
         min-idle: 0 #连接池中的最小空闲连接
-
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 hystrix:
   metrics: true #开启熔断功能（默认开启）

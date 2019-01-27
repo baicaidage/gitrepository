@@ -1,3 +1,8 @@
+server:
+  port: 2005
+  servlet:
+    context-path: /
+
 spring:
   servlet:
     multipart:
@@ -12,9 +17,8 @@ spring:
       #上传文件的临时位置
       location: /
       
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:1001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
