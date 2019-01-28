@@ -11,10 +11,10 @@ management:
 spring:
   mail:
     default-encoding: UTF-8
-    host: smtp.163.com
+    host: smtpcom.263xmail.com
     port: 25
-    username: qjls19861217@163.com
-    password: qjls952709
+    username: qinjili@idengyun.com
+    password: qwer1234
     properties:
       mail:
         stmp:
