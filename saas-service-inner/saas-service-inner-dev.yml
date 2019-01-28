@@ -1,11 +1,16 @@
 spring:
   http:
     encoding:
-      enabled: true
+      enabled: false
       charset: UTF-8
-eureka:      
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:1001/eureka
+
+server:
+  port: 2001
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

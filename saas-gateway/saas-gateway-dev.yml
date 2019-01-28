@@ -1,9 +1,14 @@
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:1001/eureka
+server:
+  port: 2004
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
 zuul:
   host:
     max-total-connections: 200  #总连接数（默认200）
