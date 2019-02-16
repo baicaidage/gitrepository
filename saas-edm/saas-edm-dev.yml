@@ -52,7 +52,6 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
   
 mybatis:
-  #config-location:
   # 映射文件所在路径
   mapper-locations: classpath:mappers/*.xml
   # pojo类所在包路径
