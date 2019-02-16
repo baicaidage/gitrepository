@@ -52,8 +52,9 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
   
 mybatis:
+  #config-location:
   # 映射文件所在路径
-  mapper-locations: classpath:mappers/*.xml
+  mapper-locations: classpath:com/dengyun/saasedm/mapping/*.xml
   # pojo类所在包路径
   type-aliases-package: com.dengyun.saasedm.entity
 pagehelper:
