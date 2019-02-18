@@ -50,4 +50,13 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
-  
+mybatis:
+  # 映射文件所在路径
+  mapper-locations: classpath:/mappers/*.xml
+  # pojo类所在包路径
+  type-aliases-package: com.dengyun.saasedm.entity
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
