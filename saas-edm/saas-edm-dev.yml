@@ -8,6 +8,7 @@ management:
     web:
       exposure:
         include: '*'
+spring:  
   mail:
     default-encoding: UTF-8
     host: smtpcom.263xmail.com
