@@ -14,7 +14,7 @@ spring:
     host: smtpcom.263xmail.com
     port: 25
     username: qinjili@idengyun.com
-    password: '{cipher}64a0e9330ac8f708ef836d8efe6c255b9c20e53a9efe10aa4cb76321f7e6ac7f'
+    password: '{cipher}AQAEEeCxgZnObXWsfpMHLmpATypYfaQZ+JU40kF43387W+cl9eTF0G60re/D4ctA6SNLK8PQ4/YW7H0BXBMTRF/zzq3LJM5LZfk9FxfBy1LGdCYrFale36ELcJDePP06zKV3H8VXYvSvsn0svDthVL9SXMnmp7voB3jzz9PI3ONu1hWdFqSWjoy8KifnSTCGZEM5v9ggAy5jBamteKKqcrm5rIPh1DFfaqeaL286dWk7VQBdQOVuT5JbxBwUaH17xjhImvcXsRiuxbjaOMCJO52OKdTfGlkeMMd8RfnY8Nn+X8gtLE1tRNyCTQmrMM4gBqtfXNYrAEFiE8vlE6lYRmiNhkRh5EiPnyh6xsZO2o6u3wIMRqAC+YPV35aoKcC8BA8='
     properties:
       mail:
         stmp:
@@ -32,7 +32,7 @@ spring:
       #配置基本属性
       url: jdbc:mysql://localhost:3306/edm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true
       username: root
-      password: '{cipher}67206d44468f85d49b14e70a3eee73f7157174bed9c8167d2e7195df458c6767'
+      password: '{cipher}AQAEEeCxgZnObXWsfpMHLmpATypYfaQZ+JU40kF43387W+cl9eTF0G60re/D4ctA6SNLK8PQ4/YW7H0BXBMTRF/zzq3LJM5LZfk9FxfBy1LGdCYrFale36ELcJDePP06zKV3H8VXYvSvsn0svDthVL9SXMnmp7voB3jzz9PI3ONu1hWdFqSWjoy8KifnSTCGZEM5v9ggAy5jBamteKKqcrm5rIPh1DFfaqeaL286dWk7VQBdQOVuT5JbxBwUaH17xjhImvcXsRiuxbjaOMCJO52OKdTfGlkeMMd8RfnY8Nn+X8gtLE1tRNyCTQmrMM4gBqtfXNYrAEFiE8vlE6lYRmiNhkRh5EiPnyh6xsZO2o6u3wIMRqAC+YPV35aoKcC8BA8='
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1
