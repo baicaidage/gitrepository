@@ -16,9 +16,22 @@ spring:
       file-size-threshold: 1MB
       #上传文件的临时位置
       location: /
-      
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true #强制加到请求及相应
+  tomcat:
+    uri-encoding: UTF-8 #web窗口 tomcat配置编码      
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+#资源存放路径
+resource:
+  os:
+    windows:
+      path: 'E:\\var\'
+    linux:
+      path: '/data/resource/'

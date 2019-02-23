@@ -1,8 +1,11 @@
 spring:
   http:
     encoding:
-      enabled: false
+      enabled: true
       charset: UTF-8
+      force: true #强制加到请求及相应
+  tomcat:
+    uri-encoding: UTF-8 #web窗口 tomcat配置编码
 
 server:
   port: 2001

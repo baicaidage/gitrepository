@@ -12,6 +12,13 @@ spring:
     encoding:
       enabled: true
       charset: UTF-8
+      force: true #强制加到请求及相应
+  tomcat:
+    uri-encoding: UTF-8 #web窗口 tomcat配置编码
+#  messages: #国际化
+#    encoding: UTF-8
+#    basename: classpath:i18n/messages
+#    fallback-to-system-local: true  #当在获取message之时，如果没有特定的locale，则默认使用当下系统的设置
   #redis集群配置
 #  redis:
 #    database: 0
