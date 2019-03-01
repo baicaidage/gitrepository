@@ -23,3 +23,6 @@ zuul:
       api-resource:
         path: /saas-resource-manager/**
         service-id: saas-resource-manager
+      api-inner:
+        path: /saas-service-inner/**
+        service-id: saas-service-inner
