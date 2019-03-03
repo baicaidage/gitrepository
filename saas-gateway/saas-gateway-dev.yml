@@ -13,7 +13,7 @@ zuul:
   host:
     max-total-connections: 200  #总连接数（默认200）
     max-per-route-connections: 20 #每个路由练级数（默认20）
-  sensitive-headers: Cookie, Set-Cookie, Authorization
+  sensitive-headers: Cookie, Set-Cookie, Authorization, Access-Control-Allow-Origin
   #避免使用默认路由规则将服务暴露，全部使用手动路由规则如下routes
   ignored-services: '*'
   routes:
@@ -26,3 +26,4 @@ zuul:
       api-inner:
         path: /saas-service-inner/**
         service-id: saas-service-inner
+        stripPrefix: true
