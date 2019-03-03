@@ -15,7 +15,7 @@ zuul:
 #    pre:
 #      disable: true
   retryable: true
-  prefix: api-api
+  prefix: api
   strip-prefix: true
   host:
     max-total-connections: 200  #总连接数（默认200）
