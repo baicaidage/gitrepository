@@ -15,8 +15,6 @@ zuul:
 #    pre:
 #      disable: true
   retryable: true
-  prefix: api
-  strip-prefix: true
   host:
     max-total-connections: 200  #总连接数（默认200）
     max-per-route-connections: 20 #每个路由练级数（默认20）
@@ -33,7 +31,6 @@ zuul:
       api-inner:
         path: /saas-service-inner/**
         service-id: saas-service-inner
-        stripPrefix: true
 
         #如果想指定某个路径的重试的开启和关闭，可以配置zuul.routes.<route>.retryable的false和true
 ribbon:
