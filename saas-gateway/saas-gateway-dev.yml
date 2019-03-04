@@ -17,6 +17,7 @@ zuul:
   retryable: true
   prefix: api
   strip-prefix: true
+  ignoredPatterns: /**/admin/** #忽略符合此表达式的uri
   host:
     max-total-connections: 200  #总连接数（默认200）
     max-per-route-connections: 20 #每个路由练级数（默认20）
