@@ -30,7 +30,7 @@ spring:
       filters: stat
       driver-class-name: com.mysql.jdbc.Driver
       #配置基本属性
-      url: jdbc:mysql://localhost:3306/edm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true
+      url: jdbc:mysql://192.168.131.130:3306/edm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true
       username: root
       password: '{cipher}AQBRbrXO2xZNHwc1uzuvxk+6M27L/QwQX/kAGWs8R0e5IgGDxlpxAF1ZNWzD9AwnOq1n+dnxYMK3vk4xJn39eRJlUJ1WiQqZhXFvG5M0S5KvWSm7xdgPhLyIqJaXrl6+gI6w5SWiFgMlp/MrlWsPAwVU3lC0LqUExT7T6wgCJGYDkax7up2Gr/+twvAjLu1v67b65RC33lvXTrWJ9cZv68cDfWNY6wZLpAc1VP7Wj4dndIQzHW1TKtmWr2GoauzeT/uiObqOTAjuedFdT0lyTnlz7dMh7rVNQF1/ZMurOeSh83GMlh0RS8HNDIRuv9ytI64F8W7kNt17aKjzS0lBV4p3LYUxVlQ3OrazXdI5WsfBhObvrNwqEOA3fgZuGiw8ULg='
       #配置初始化大小/最小/最大
