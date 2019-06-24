@@ -16,7 +16,7 @@ zuul:
 #      disable: true
   retryable: true
   prefix: /api
-  strip-prefix: true
+  strip-prefix: true  # 默认为true代理前缀/api默认会从请求路径中移除
   ignoredPatterns: /**/admin/** #忽略符合此表达式的uri
   host:
     max-total-connections: 200  #总连接数（默认200）
