@@ -15,7 +15,7 @@ zuul:
 #    pre:
 #      disable: true
   retryable: true
-  prefix: api
+  prefix: /api
   strip-prefix: false
   ignoredPatterns: /**/admin/** #忽略符合此表达式的uri
   host:
