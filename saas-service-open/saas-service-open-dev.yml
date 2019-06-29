@@ -43,7 +43,7 @@ spring:
   #redis非集群配置
   redis:
     database: 0 #使用redis的的那个库
-    host: localhost #连接地址
+    host: 10.10.8.22 #连接地址
     port: 63790  #端口口
     password: ecosystem  #连接密钥
     timeout: 100ms #连接超时时间
